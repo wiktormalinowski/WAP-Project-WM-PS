@@ -20,7 +20,7 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private long id;
 
     @Column(name = "name")
     private String name;
@@ -29,7 +29,7 @@ public class Item {
     private String condition;
 
     @Column(name = "weight")
-    private Double weight;
+    private float weight;
 
     @Column(name = "brand_name")
     private String brand_name;
