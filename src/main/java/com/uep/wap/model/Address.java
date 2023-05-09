@@ -30,4 +30,6 @@ public class Address {
     @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
     private List<Auction> auctions;
 
+    @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
+    private List<User> user;
 }

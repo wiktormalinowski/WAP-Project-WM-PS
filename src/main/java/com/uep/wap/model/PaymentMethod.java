@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "payment_methods")
@@ -23,4 +24,7 @@ public class PaymentMethod {
 
     @Column(name="method_name")
     private String method_name;
+
+    @OneToMany(mappedBy = "payment_method", cascade = CascadeType.ALL)
+    private List<Auction> auctions;
 }

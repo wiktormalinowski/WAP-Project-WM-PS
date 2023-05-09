@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "delivery_options")
@@ -29,4 +30,7 @@ public class DeliveryOption {
 
     @Column(name="description")
     private String description;
+
+    @OneToMany(mappedBy = "delivery_option", cascade = CascadeType.ALL)
+    private List<Auction> auctions;
 }

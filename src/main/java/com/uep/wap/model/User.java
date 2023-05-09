@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -34,4 +35,8 @@ public class User {
     @JoinColumn(name = "role_id")
     private Role role;
 
+    //tego nie mamy w figma (w auctions nie ma klucza obcego od user), nwm czy powinno
+    @OneToMany
+    @JoinColumn(name = "user", cascade = CascadeType.ALL)
+    private List<Auction> auctions;
 }

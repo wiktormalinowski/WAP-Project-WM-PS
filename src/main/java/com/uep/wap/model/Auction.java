@@ -62,4 +62,15 @@ public class Auction {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    @ManyToOne
+    @JoinColumn(name = "method_id")
+    private PaymentMethod paymentMethod;
+
+    @ManyToOne
+    @JoinColumn(name = "delivery_id");
+    private DeliveryOption deliveryOption;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
