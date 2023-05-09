@@ -16,10 +16,13 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
+
     @Column(name = "street")
     private String street;
+
     @Column(name = "city")
     private String city;
+
     @Column(name = "postal_code")
     private String postal_code;
 
