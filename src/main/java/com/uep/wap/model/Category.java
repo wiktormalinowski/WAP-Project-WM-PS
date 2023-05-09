@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "categories")
@@ -25,5 +26,7 @@ public class Category {
     private String category_name;
 
     // private PARENT CATEGORY?
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private List<Auction> auctions;
 
 }
