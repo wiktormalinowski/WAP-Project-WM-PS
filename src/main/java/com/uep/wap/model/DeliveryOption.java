@@ -19,13 +19,13 @@ public class DeliveryOption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-    private Long id;
+    private long id;
 
     @Column(name="delivery_company")
     private String delivery_company;
 
     @Column(name="delivery_price")
-    private int delivery_price;
+    private float delivery_price;
 
     @Column(name="description")
     private String description;
