@@ -25,7 +25,7 @@ public class Item {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "condition")
+    @Column(name = "item_condition")
     private String condition;
 
     @Column(name = "weight")
