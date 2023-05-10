@@ -19,10 +19,10 @@ public class PaymentMethod {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private long id;
 
-    @Column(name="method_name")
+    @Column(name = "method_name")
     private String method_name;
 
     @OneToMany(mappedBy = "paymentMethod", cascade = CascadeType.ALL)

@@ -19,10 +19,10 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private long id;
 
-    @Column(name="category_name")
+    @Column(name = "category_name")
     private String category_name;
 
     // private PARENT CATEGORY?
