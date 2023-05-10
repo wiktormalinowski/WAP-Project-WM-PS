@@ -25,6 +25,6 @@ public class PaymentMethod {
     @Column(name="method_name")
     private String method_name;
 
-    @OneToMany(mappedBy = "payment_method", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "paymentMethod", cascade = CascadeType.ALL)
     private List<Auction> auctions;
 }

@@ -67,7 +67,7 @@ public class Auction {
     private PaymentMethod paymentMethod;
 
     @ManyToOne
-    @JoinColumn(name = "delivery_id");
+    @JoinColumn(name = "delivery_id")
     private DeliveryOption deliveryOption;
 
     @ManyToOne
