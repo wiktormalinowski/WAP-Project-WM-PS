@@ -4,9 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "categories")
@@ -29,4 +32,10 @@ public class Category {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Auction> auctions;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @Nullable
+    private Category parentCategory;
+
+    @OneToMany(mappedBy = "parentCategory")
+    private Set<Category> subCategories = new HashSet<>();
 }
