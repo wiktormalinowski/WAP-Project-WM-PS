@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "payment_methods")
@@ -18,9 +19,12 @@ public class PaymentMethod {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private long id;
 
-    @Column(name="method_name")
+    @Column(name = "method_name")
     private String method_name;
+
+    @OneToMany(mappedBy = "paymentMethod", cascade = CascadeType.ALL)
+    private List<Auction> auctions;
 }

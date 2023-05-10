@@ -1,11 +1,15 @@
 package com.uep.wap.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "adresses")
+@Table(name = "addresses")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -26,4 +30,9 @@ public class Address {
     @Column(name = "postal_code")
     private String postal_code;
 
+    @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
+    private List<Auction> auctions;
+
+    @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
+    private List<User> user;
 }

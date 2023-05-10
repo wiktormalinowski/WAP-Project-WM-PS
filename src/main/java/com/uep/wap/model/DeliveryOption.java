@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "delivery_options")
@@ -18,15 +19,18 @@ public class DeliveryOption {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private long id;
 
-    @Column(name="delivery_company")
+    @Column(name = "delivery_company")
     private String delivery_company;
 
-    @Column(name="delivery_price")
+    @Column(name = "delivery_price")
     private float delivery_price;
 
-    @Column(name="description")
+    @Column(name = "description")
     private String description;
+
+    @OneToMany(mappedBy = "deliveryOption", cascade = CascadeType.ALL)
+    private List<Auction> auctions;
 }
