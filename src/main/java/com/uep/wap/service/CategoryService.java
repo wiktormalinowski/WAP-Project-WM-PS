@@ -18,4 +18,6 @@ public class CategoryService {
         categoryRepository.save(category);
         System.out.println("Category added!");
     }
+    public Iterable<Category> getAllCategories() { return categoryRepository.findAll();
+    }
 }

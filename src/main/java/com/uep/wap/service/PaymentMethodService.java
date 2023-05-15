@@ -2,7 +2,6 @@ package com.uep.wap.service;
 
 
 import com.uep.wap.dto.PaymentMethodDTO;
-import com.uep.wap.dto.PaymentMethodDataDTO;
 import com.uep.wap.model.PaymentMethod;
 import com.uep.wap.repository.PaymentMethodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +23,4 @@ public class PaymentMethodService {
     public Iterable<PaymentMethod> getAllPaymentMethod(){
         return paymentMethodRepository.findAll();
     }
-
-
-
-
-
-
-
-
-
 }
