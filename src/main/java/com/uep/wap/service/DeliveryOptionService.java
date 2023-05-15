@@ -21,6 +21,7 @@ public class DeliveryOptionService {
         System.out.println("Delivery Option added!");
     }
 
-
-
+    public Iterable<DeliveryOption> getAllDeliveryOptions() {
+        return deliveryOptionRepository.findAll();
+    }
 }
