@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Smartfon Samsung Galaxy S21",
+    "condition": "Nowy",
+    "weight": 0.75,
+    "brand_name": "Samsung"
+  },
+  {
+    "id": 2,
+    "name": "Laptop Dell XPS 15",
+    "condition": "Używany",
+    "weight": 1.2,
+    "brand_name": "Dell"
+  },
+  {
+    "id": 3,
+    "name": "Konsola Sony PlayStation 5",
+    "condition": "Nowa",
+    "weight": 3.5,
+    "brand_name": "Sony"
+  },
+  {
+    "id": 4,
+    "name": "Telewizor LG OLED CX",
+    "condition": "Używany",
+    "weight": 25.0,
+    "brand_name": "LG"
+  },
+  {
+    "id": 5,
+    "name": "Aparat Canon EOS R6",
+    "condition": "Nowy",
+    "weight": 1.5,
+    "brand_name": "Canon"
+  },
+  {
+    "id": 6,
+    "name": "Słuchawki Bose QuietComfort 35 II",
+    "condition": "Używane",
+    "weight": 0.3,
+    "brand_name": "Bose"
+  },
+  {
+    "id": 7,
+    "name": "Monitor Dell Ultrasharp U2720Q",
+    "condition": "Nowy",
+    "weight": 5.0,
+    "brand_name": "Dell"
+  },
+  {
+    "id": 8,
+    "name": "Smartwatch Apple Watch Series 6",
+    "condition": "Nowy",
+    "weight": 0.05,
+    "brand_name": "Apple"
+  },
+  {
+    "id": 9,
+    "name": "Kamera GoPro Hero9 Black",
+    "condition": "Używana",
+    "weight": 0.5,
+    "brand_name": "GoPro"
+  },
+  {
+    "id": 10,
+    "name": "Głośniki Sonos One",
+    "condition": "Nowe",
+    "weight": 1.8,
+    "brand_name": "Sonos"
+  },
+  {
+    "id": 11,
+    "name": "Kurtka zimowa The North Face Arctic Parka",
+    "condition": "Nowa",
+    "weight": 1.2,
+    "brand_name": "The North Face"
+  },
+  {
+    "id": 12,
+    "name": "Spodnie jeansowe Levi's 501",
+    "condition": "Używane",
+    "weight": 0.8,
+    "brand_name": "Levi's"
+  },
+  {
+    "id": 13,
+    "name": "Sukienka wieczorowa Ralph Lauren",
+    "condition": "Nowa",
+    "weight": 0.5,
+    "brand_name": "Ralph Lauren"
+  },
+  {
+    "id": 14,
+    "name": "Koszulka polo Lacoste",
+    "condition": "Nowa",
+    "weight": 0.3,
+    "brand_name": "Lacoste"
+  },
+  {
+    "id": 15,
+    "name": "Buty sportowe Nike Air Max 270",
+    "condition": "Nowe",
+    "weight": 0.9,
+    "brand_name": "Nike"
+  },
+  {
+    "id": 16,
+    "name": "Bluza adidas Originals Trefoil",
+    "condition": "Używana",
+    "weight": 0.6,
+    "brand_name": "adidas"
+  },
+  {
+    "id": 17,
+    "name": "Garnitur Hugo Boss",
+    "condition": "Nowy",
+    "weight": 2.5,
+    "brand_name": "Hugo Boss"
+  },
+  {
+    "id": 18,
+    "name": "Kapelusz Stetson",
+    "condition": "Nowy",
+    "weight": 0.2,
+    "brand_name": "Stetson"
+  },
+  {
+    "id": 19,
+    "name": "Bluzka Calvin Klein",
+    "condition": "Nowa",
+    "weight": 0.4,
+    "brand_name": "Calvin Klein"
+  },
+  {
+    "id": 20,
+    "name": "Szmizjerka Tommy Hilfiger",
+    "condition": "Używana",
+    "weight": 1.0,
+    "brand_name": "Tommy Hilfiger"
+  },
+  {
+    "id": 21,
+    "name": "Gitara elektryczna Fender Stratocaster",
+    "condition": "Nowa",
+    "weight": 3.8,
+    "brand_name": "Fender"
+  },
+  {
+    "id": 22,
+    "name": "Keyboard Yamaha PSR-E363",
+    "condition": "Używany",
+    "weight": 5.2,
+    "brand_name": "Yamaha"
+  },
+  {
+    "id": 23,
+    "name": "Mikrofon Shure SM58",
+    "condition": "Nowy",
+    "weight": 0.3,
+    "brand_name": "Shure"
+  },
+  {
+    "id": 24,
+    "name": "Perkusja elektroniczna Roland TD-17KVX",
+    "condition": "Używana",
+    "weight": 20.5,
+    "brand_name": "Roland"
+  },
+  {
+    "id": 25,
+    "name": "Saksofon altowy Yamaha YAS-280",
+    "condition": "Nowy",
+    "weight": 2.9,
+    "brand_name": "Yamaha"
+  },
+  {
+    "id": 26,
+    "name": "MiksPult Soundcraft Signature 12MTK",
+    "condition": "Nowy",
+    "weight": 4.7,
+    "brand_name": "Soundcraft"
+  },
+  {
+    "id": 27,
+    "name": "Głośniki studyjne KRK Rokit RP7 G4",
+    "condition": "Nowe",
+    "weight": 9.5,
+    "brand_name": "KRK"
+  },
+  {
+    "id": 28,
+    "name": "Syntezator Korg Minilogue XD",
+    "condition": "Nowy",
+    "weight": 2.8,
+    "brand_name": "Korg"
+  },
+  {
+    "id": 29,
+    "name": "Ukulele Lanikai LU-21",
+    "condition": "Nowe",
+    "weight": 0.5,
+    "brand_name": "Lanikai"
+  },
+  {
+    "id": 30,
+    "name": "Wzmacniacz gitarowy Marshall DSL40CR",
+    "condition": "Używany",
+    "weight": 22.0,
+    "brand_name": "Marshall"
+  }
+]
