@@ -1,5 +1,6 @@
 package com.uep.wap.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -41,5 +42,6 @@ public class User {
 
     //tego nie mamy w figma (w auctions nie ma klucza obcego od user), nwm czy powinno
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Auction> auctions;
 }

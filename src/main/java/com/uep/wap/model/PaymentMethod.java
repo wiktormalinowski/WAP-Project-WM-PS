@@ -1,5 +1,6 @@
 package com.uep.wap.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,5 +27,6 @@ public class PaymentMethod {
     private String method_name;
 
     @OneToMany(mappedBy = "paymentMethod", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Auction> auctions;
 }

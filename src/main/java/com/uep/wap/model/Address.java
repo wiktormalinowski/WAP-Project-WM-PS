@@ -1,5 +1,6 @@
 package com.uep.wap.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,9 +31,11 @@ public class Address {
     @Column(name = "postal_code")
     private String postal_code;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
     private List<Auction> auctions;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
     private List<User> user;
 }

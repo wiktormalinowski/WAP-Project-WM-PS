@@ -1,5 +1,6 @@
 package com.uep.wap.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,12 +31,14 @@ public class Category {
 
     // private PARENT CATEGORY?
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Auction> auctions;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @Nullable
     private Category parentCategory;
 
     @OneToMany(mappedBy = "parentCategory")
+    @JsonIgnore
     private Set<Category> subCategories = new HashSet<>();
 }
