@@ -75,7 +75,7 @@ public class Auction {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToOne(mappedBy = "auction", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL)
     @JsonIgnore
-    private Bid auction_bid;
+    private List<Bid> bidList;
 }
