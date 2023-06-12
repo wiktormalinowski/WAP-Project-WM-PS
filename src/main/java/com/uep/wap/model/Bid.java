@@ -28,8 +28,7 @@ public class Bid {
     @Column(name = "bid_amount")
     private float bid_amount;
 
-    @OneToOne
+     @ManyToOne
     @JoinColumn(name = "auction_id")
     private Auction auction;
-
 }
