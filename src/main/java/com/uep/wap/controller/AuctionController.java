@@ -2,13 +2,11 @@ package com.uep.wap.controller;
 
 import com.uep.wap.dto.AuctionDTO;
 import com.uep.wap.model.Auction;
+import com.uep.wap.model.Bid;
 import com.uep.wap.service.AuctionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,12 +23,22 @@ public class AuctionController {
 
     @GetMapping(path = "/getAuctions")
     public String getAllAuctions(Model model) {
+        List<Auction> bids = new ArrayList<>();
         List<Auction> auctions = new ArrayList<>();
 
         auctionService.getAllAuctions().forEach(auctions::add);
         model.addAttribute("auctions", auctions);
 
-        return "auctions";
+        return "allAuctions";
+    }
+
+    @GetMapping(path = "/auction{id}")
+    public String getAuctionById(Model model, @RequestParam long id) {
+
+        Auction auction = auctionService.getAuctionById(id);
+        model.addAttribute("auction", auction);
+
+        return "auction";
     }
 
     @PostMapping(path = "/addAuction")

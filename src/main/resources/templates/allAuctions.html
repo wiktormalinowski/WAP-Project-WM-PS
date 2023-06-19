@@ -8,6 +8,8 @@
 </head>
 <body>
 <div th:replace="fragments/nav :: nav"></div>
+<article>
+
 <main class="container">
     <div th:if="${auctions.size() > 0}">
         <table role="grid">
@@ -29,12 +31,13 @@
                 <td>[[${auction.buy_now_price}]]</td>
                 <td>[[${auction.end_date}]]</td>
                 <td>
-                    <a th:href="@{/auctions/id}" role="button">Więcej</a>
+                    <a th:href="@{/auctionController/auction(id=${auction.id})}" role="button">Więcej</a>
                 </td>
             </tr>
             </tbody>
         </table>
     </div>
 </main>
+</article>
 </body>
 </html>

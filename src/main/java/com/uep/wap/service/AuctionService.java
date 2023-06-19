@@ -31,4 +31,8 @@ public class AuctionService {
     public Iterable<Auction> getAllAuctions() {
         return auctionRepository.findAll();
     }
+
+    public Auction getAuctionById(long id) {
+        return auctionRepository.findById(id).get();
+    }
 }
