@@ -4,54 +4,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" th:href="@{/pico/css/pico.css}">
-    <title>Hello, world!</title>
+    <title>Aukcja</title>
 </head>
 <body>
 <div th:replace="fragments/nav :: nav"></div>
 <article>
 
 <main class="container">
-        <hgroup>
-            <h1>[[${auction.name}]]</h1>
-            <h2>[[${auction.quantity}]]</h2>
-            <h3>[[${auction.current_bid_price}]]</h3>
-            <h4>[[${auction.buy_now_price}]]</h4>
-            <h5>[[${auction.end_date}]]</h5>
-        </hgroup>
-
+    <hgroup>
+        <h1>[[${auction.name}]]</h1>
+        <h3 style="text-align:right">Liczba sztuk: [[${auction.quantity}]]</h3>
+        <h5 style="text-align:right">Cena początkowa: [[${auction.start_price}]]</h5>
+        <h5 style="text-align:right">Aktualna cena: [[${auction.current_bid_price}]]</h5>
+        <h5 style="text-align:right">Cena kup teraz: [[${auction.buy_now_price}]]</h5>
+       <!-- <h5 style="text-align:right">Item info: [[${auction.item.condition}]]</h5> -->
+        <h5></h5>
+    </hgroup>
     <form>
-
-        <!-- Grid -->
         <div class="grid">
-
-            <!-- Markup example 1: input is inside label -->
             <input type="text" id="bidAmount" name="bidAmount" placeholder="Wysokość podbicia" required>
-
-
-            <!-- Button -->
             <button type="submit">Podbij</button>
-
+            <button type="button">Kup Teraz</button>
         </div>
+        <h6 style="text-align:right">Data zakończenia aukcji: [[${auction.end_date}]]</h6>
     </form>
-
-        <div th:if="${auction.getBidList().size() > 0}">
-            <table role="grid">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Wysokość podbicia</th>
-                    <th scope="col">Kto podbił</th>
-                </tr>
-                </thead>
-                <tbody>
+<!---
+    <div th:if="${auction.getItem() != null}">
+        <table role="grid">
+            <thead>
+            <tr>
+                <th scope="col">Stan</th>
+                <th scope="col">Ciężar</th>
+                <th scope="col">Producent</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${auction.getItem()}">
+                <td>[[${item.condition}]]</td>
+                <td>[[${ite.weight}]]</td>
+                <td>[[${item.brand_name}]]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+-->
+    <div th:if="${auction.getBidList().size() > 0}">
+        <table role="grid">
+            <thead>
+               <tr>
+                   <th scope="col">#</th>
+                   <th scope="col">Wysokość podbicia</th>
+                   <th scope="col">Kto podbił</th>
+               </tr>
+            </thead>
+            <tbody>
                 <tr th:each="bid : ${auction.getBidList()}">
                     <td>[[${bid.id}]]</td>
                     <td>[[${bid.bid_amount}]]</td>
                     <td>[[${bid.user.username}]]</td>
                 </tr>
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
+    </div>
 
 </main>
 </article>
