@@ -13,12 +13,11 @@
 <main class="container">
     <hgroup>
         <h1>[[${auction.name}]]</h1>
-        <h3 style="text-align:right">Liczba sztuk: [[${auction.quantity}]]</h3>
-        <h5 style="text-align:right">Cena początkowa: [[${auction.start_price}]]</h5>
-        <h5 style="text-align:right">Aktualna cena: [[${auction.current_bid_price}]]</h5>
+        <h2 style="text-align:right">Liczba sztuk: [[${auction.quantity}]]</h2>
+        <h3 style="text-align:right">Cena początkowa: [[${auction.start_price}]]</h3>
+        <h4 style="text-align:right">Aktualna cena: [[${auction.current_bid_price}]]</h4>
         <h5 style="text-align:right">Cena kup teraz: [[${auction.buy_now_price}]]</h5>
-       <!-- <h5 style="text-align:right">Item info: [[${auction.item.condition}]]</h5> -->
-        <h5></h5>
+        <h5 style="text-align:right">Stan: [[${auction.item.condition}]]</h5>
     </hgroup>
     <form>
         <div class="grid">
@@ -28,26 +27,6 @@
         </div>
         <h6 style="text-align:right">Data zakończenia aukcji: [[${auction.end_date}]]</h6>
     </form>
-<!---
-    <div th:if="${auction.getItem() != null}">
-        <table role="grid">
-            <thead>
-            <tr>
-                <th scope="col">Stan</th>
-                <th scope="col">Ciężar</th>
-                <th scope="col">Producent</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="item : ${auction.getItem()}">
-                <td>[[${item.condition}]]</td>
-                <td>[[${ite.weight}]]</td>
-                <td>[[${item.brand_name}]]</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
--->
     <div th:if="${auction.getBidList().size() > 0}">
         <table role="grid">
             <thead>
