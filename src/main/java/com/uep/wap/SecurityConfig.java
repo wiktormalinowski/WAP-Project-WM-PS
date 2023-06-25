@@ -20,6 +20,14 @@ public class SecurityConfig {
     private final UserService userService;
     private final Encoder encoder;
 
+    private static final String[] AUTH_WHITELIST = {
+            "/userController/registerUser",
+            "/auctionController/getAuctions",
+            "/auctionController/auction/**",
+            "/pico/css/**"
+    };
+
+
     public SecurityConfig(UserService userService, Encoder encoder) {
         this.userService = userService;
         this.encoder = encoder;
@@ -38,10 +46,8 @@ public class SecurityConfig {
         http.csrf().disable().headers().frameOptions().sameOrigin();
 
         http.authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/recipe/*").permitAll()
-                .antMatchers("/userController/registerUser", "/h2-console/**", "/actuator/shutdown", "/testing").permitAll()
-                .and()
-                .authorizeRequests().anyRequest().authenticated()
+                .antMatchers(HttpMethod.GET, AUTH_WHITELIST).permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
