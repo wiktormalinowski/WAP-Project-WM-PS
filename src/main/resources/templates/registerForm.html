@@ -1,0 +1,48 @@
+<!doctype html>
+<html data-theme="light" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/pico/css/pico.css}">
+    <title>rejestracja</title>
+</head>
+<body>
+<div th:replace="fragments/nav :: nav"></div>
+<article>
+
+<main class="container">
+    <h2>Rejestracja</h2>
+    <form th:action="@{/userController/registerUser}" th:object="${user}" method="post">
+
+        <label>Nazwa użytkownika:</label>
+        <input type="text" th:field="*{username}" required><br><br>
+
+        <label >Email:</label>
+        <input type="email" th:field="*{email}" required><br><br>
+
+        <label >Hasło:</label>
+        <input type="password" th:field="*{password}" required><br><br>
+
+        <label >ulica:</label>
+        <input type="text" th:field="*{address.street}" required><br><br>
+
+        <label >miasto:</label>
+        <input type="text" th:field="*{address.city}" required><br><br>
+
+        <label >kod pocztowy:</label>
+        <input type="text" th:field="*{address.postal_code}" required><br><br>
+
+<!--        <label for="role">Role:</label>-->
+<!--        <select id="role" name="role" required>-->
+<!--            <option value="">Select Role</option>-->
+<!--            <option value="admin">Admin</option>-->
+<!--            <option value="user">User</option>-->
+<!--        </select><br><br>-->
+
+        <input type="submit" value="Register">
+    </form>
+</main>
+</article>
+
+</body>
+</html>
