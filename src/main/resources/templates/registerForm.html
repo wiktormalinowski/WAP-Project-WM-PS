@@ -1,0 +1,41 @@
+<!doctype html>
+<html data-theme="light" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/pico/css/pico.css}">
+    <title>Rejestracja</title>
+</head>
+<body>
+<div th:replace="fragments/nav :: nav"></div>
+<article>
+
+<main class="container">
+    <h2>Rejestracja</h2>
+    <form th:action="@{/userController/registerUser}" th:object="${user}" method="post">
+
+        <label>Nazwa użytkownika:</label>
+        <input type="text" th:field="*{username}" placeholder="superAukcjoner" required><br><br>
+
+        <label >Email:</label>
+        <input type="email" th:field="*{email}" placeholder="jan.kowalski@przykład.pl" required><br><br>
+
+        <label >Hasło:</label>
+        <input type="password" th:field="*{password}" required><br><br>
+
+        <label >Ulica:</label>
+        <input type="text" th:field="*{address.street}" placeholder="Długa 1" required><br><br>
+
+        <label >Miasto:</label>
+        <input type="text" th:field="*{address.city}" placeholder="Wałbrzych" required><br><br>
+
+        <label >Kod pocztowy:</label>
+        <input type="text" th:field="*{address.postal_code}" placeholder="58-160" required><br><br>
+
+        <input type="submit" value="Zarejestruj się">
+    </form>
+</main>
+</article>
+
+</body>
+</html>

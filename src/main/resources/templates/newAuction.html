@@ -1,0 +1,53 @@
+<!doctype html>
+<html data-theme="light" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/pico/css/pico.css}">
+    <title>Nowa aukcja</title>
+</head>
+<body>
+<div th:replace="fragments/nav :: nav"></div>
+<article>
+
+<main class="container">
+    <h2>Nowa aukcja</h2>
+    <form th:action="@{/auctionController/newAuction}" th:object="${auction}" method="post">
+
+        <label>Nazwa aukcji:</label>
+        <input type="text" th:field="*{name}" placeholder="Słuchawki Sony" required><br><br>
+
+        <label >Ilość:</label>
+        <input type="text" th:field="*{quantity}" placeholder="2" required><br><br>
+
+        <label >Cena początkowa:</label>
+        <input type="text" th:field="*{start_price}" placeholder="500" required><br><br>
+
+        <label >Cena kup teraz:</label>
+        <input type="text" th:field="*{buy_now_price}" placeholder="1000" required><br><br>
+
+        <label >Minimalne podbicie:</label>
+        <input type="text" th:field="*{min_bid}" placeholder="50" required><br><br>
+
+        <label >Nazwa przedmiotu:</label>
+        <input type="text" th:field="*{item.name}" placeholder="1000XM4" required><br><br>
+
+        <label >Stan:</label>
+        <input type="text" th:field="*{item.condition}" placeholder="Nowy" required><br><br>
+
+        <label >Waga (w kilogramach):</label>
+        <input type="text" th:field="*{item.weight}" placeholder="0.5" required><br><br>
+
+        <label >Marka:</label>
+        <input type="text" th:field="*{item.brand_name}" placeholder="Sony" required><br><br>
+
+        <label >Data zakończenia aukcji</label>
+        <input type="date" th:field="*{end_date}" required><br><br>
+
+        <input type="submit" value="Dodaj aukcje">
+    </form>
+</main>
+</article>
+
+</body>
+</html>

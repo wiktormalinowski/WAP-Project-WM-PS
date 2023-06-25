@@ -2,7 +2,10 @@ package com.uep.wap.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -27,7 +30,7 @@ public class Item {
     private String condition;
 
     @Column(name = "weight")
-    private float weight;
+    private Float weight;
 
     @Column(name = "brand_name")
     private String brand_name;

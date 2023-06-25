@@ -15,6 +15,8 @@ public class BidService {
     public void addBid(BidDTO bidDTO){
         Bid bid = new Bid();
         bid.setBid_amount(bidDTO.getBid_amount());
+        bid.setUser(bidDTO.getUser());
+        bid.setAuction(bidDTO.getAuction());
         bidRepository.save(bid);
         System.out.println("Bid applied!");
     }

@@ -31,8 +31,8 @@ public class Address {
     @Column(name = "postal_code")
     private String postal_code;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Auction> auctions;
 
     @JsonIgnore

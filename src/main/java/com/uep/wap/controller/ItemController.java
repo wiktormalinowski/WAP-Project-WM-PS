@@ -1,8 +1,8 @@
 package com.uep.wap.controller;
 
-import com.uep.wap.service.ItemService;
-import com.uep.wap.model.Item;
 import com.uep.wap.dto.ItemDTO;
+import com.uep.wap.model.Item;
+import com.uep.wap.service.ItemService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
