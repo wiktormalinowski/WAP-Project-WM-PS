@@ -42,9 +42,19 @@ public class AuctionController {
         return "auction";
     }
 
-    @PostMapping(path = "/addAuction")
-    public String addAuction(AuctionDTO auctionDTO) {
+    @PostMapping(path = "/newAuction")
+    public String addAuction(@ModelAttribute AuctionDTO auctionDTO) {
+
+        if ( auctionService.getAuctionByName( auctionDTO.getName()) != null ) {
+            return "redirect:/userController/newAuction";
+        }
         auctionService.addAuction(auctionDTO);
-        return "Auction added!";
+        return "redirect:/auctionController/getAuctions";
+    }
+
+    @GetMapping(path = "/newAuction")
+    public String addAuctionForm(Model model) {
+        model.addAttribute("auction", new Auction());
+        return "newAuction";
     }
 }
