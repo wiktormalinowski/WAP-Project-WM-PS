@@ -1,6 +1,7 @@
 package com.uep.wap.controller;
 
 import com.uep.wap.dto.AuctionDTO;
+import com.uep.wap.dto.BidDTO;
 import com.uep.wap.model.Auction;
 import com.uep.wap.model.Bid;
 import com.uep.wap.service.AuctionService;
@@ -23,7 +24,6 @@ public class AuctionController {
 
     @GetMapping(path = "/getAuctions")
     public String getAllAuctions(Model model) {
-        List<Auction> bids = new ArrayList<>();
         List<Auction> auctions = new ArrayList<>();
 
         auctionService.getAllAuctions().forEach(auctions::add);
@@ -37,6 +37,7 @@ public class AuctionController {
 
         Auction auction = auctionService.getAuctionById(id);
         model.addAttribute("auction", auction);
+        model.addAttribute("newBid", new BidDTO());
 
         return "auction";
     }

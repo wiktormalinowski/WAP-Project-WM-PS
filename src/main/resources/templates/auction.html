@@ -19,14 +19,13 @@
         <h5 style="text-align:right">Cena kup teraz: [[${auction.buy_now_price}]]</h5>
         <h5 style="text-align:right">Stan: [[${auction.item.condition}]]</h5>
     </hgroup>
-    <form>
+    <form th:action="@{/bidController/addBid(id=${auction.id})}" th:object="${newBid}" method="post">
         <div class="grid">
-            <input type="text" id="bidAmount" name="bidAmount" placeholder="Wysokość podbicia" required>
+            <label><input type="number" th:field="*{bid_amount}" placeholder="Wysokość podbicia" required /></label>
             <button type="submit">Podbij</button>
-            <button type="button">Kup Teraz</button>
         </div>
-        <h6 style="text-align:right">Data zakończenia aukcji: [[${auction.end_date}]]</h6>
     </form>
+    <h6 style="text-align:right">Data zakończenia aukcji: [[${auction.end_date}]]</h6>
     <div th:if="${auction.getBidList().size() > 0}">
         <table role="grid">
             <thead>
