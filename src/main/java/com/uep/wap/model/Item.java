@@ -27,7 +27,7 @@ public class Item {
     private String condition;
 
     @Column(name = "weight")
-    private float weight;
+    private Float weight;
 
     @Column(name = "brand_name")
     private String brand_name;

@@ -28,20 +28,20 @@ public class Auction {
     private String name;
 
     @Column(name = "quantity")
-    private int quantity;
+    private Integer quantity;
 
     @Column(name = "current_bid_price")
     private float current_bid_price;
 
     @Column(name = "start_price")
-    private float start_price;
+    private Float start_price;
 
     @Column(name = "min_bid")
-    private float min_bid;
+    private Float min_bid;
 
     @Column(name = "buy_now_price")
     @Nullable
-    private float buy_now_price;
+    private Float buy_now_price;
 
     @Column(name = "status")
     private String status;

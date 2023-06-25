@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BidDTO {
-    private float bid_amount;
+    private Float bid_amount;
     private User user;
     private Auction auction;
 }

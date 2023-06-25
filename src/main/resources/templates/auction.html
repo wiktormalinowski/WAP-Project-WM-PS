@@ -21,7 +21,7 @@
     </hgroup>
     <form th:action="@{/bidController/addBid(id=${auction.id})}" th:object="${newBid}" method="post">
         <div class="grid">
-            <label><input type="number" th:field="*{bid_amount}" placeholder="Wysokość podbicia" required /></label>
+            <label><input type="text" th:field="*{bid_amount}" placeholder="Wysokość podbicia" required /></label>
             <button type="submit">Podbij</button>
         </div>
     </form>
@@ -36,8 +36,8 @@
                </tr>
             </thead>
             <tbody>
-                <tr th:each="bid : ${auction.getBidList()}">
-                    <td>[[${bid.id}]]</td>
+                <tr th:each="bid, iterStat : ${auction.getBidList()}">
+                    <td>[[${iterStat.index} + 1]]</td>
                     <td>[[${bid.bid_amount}]]</td>
                     <td>[[${bid.user.username}]]</td>
                 </tr>

@@ -1262,7 +1262,7 @@ textarea::placeholder,
 textarea::-webkit-input-placeholder,
 select:invalid {
   color: var(--form-element-placeholder-color);
-  opacity: 1;
+  opacity: 0.4;
 }
 
 input:not([type=checkbox], [type=radio]),
