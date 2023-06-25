@@ -46,7 +46,7 @@ public class SecurityConfig {
         http.csrf().disable().headers().frameOptions().sameOrigin();
 
         http.authorizeRequests()
-                .antMatchers(HttpMethod.GET, AUTH_WHITELIST).permitAll()
+                .antMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement()
