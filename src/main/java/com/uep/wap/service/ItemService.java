@@ -1,11 +1,8 @@
 package com.uep.wap.service;
 
 import com.uep.wap.dto.ItemDTO;
-import com.uep.wap.dto.PaymentMethodDTO;
 import com.uep.wap.model.Item;
-import com.uep.wap.model.PaymentMethod;
 import com.uep.wap.repository.ItemRepository;
-import com.uep.wap.repository.PaymentMethodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -3,7 +3,6 @@ package com.uep.wap.controller;
 import com.uep.wap.dto.AuctionDTO;
 import com.uep.wap.dto.BidDTO;
 import com.uep.wap.model.Auction;
-import com.uep.wap.model.Bid;
 import com.uep.wap.service.AuctionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,16 +1,12 @@
 package com.uep.wap.service;
 
-import com.uep.wap.dto.AddressDTO;
 import com.uep.wap.dto.AuctionDTO;
-import com.uep.wap.model.Address;
 import com.uep.wap.model.Auction;
 import com.uep.wap.model.Item;
 import com.uep.wap.repository.AuctionRepository;
 import com.uep.wap.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.concurrent.locks.Condition;
 
 @Service
 public class AuctionService {
