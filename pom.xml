@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.uep</groupId>
-    <artifactId>wap-initial-project</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>auction-app</artifactId>
+    <version>1.0</version>
     <name>wap</name>
     <description>wap</description>
     <properties>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
+            <version>1.18.30</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
